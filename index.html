@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profile Form</title>
+    <link rel="stylesheet" href="https://matcha.mizu.sh/matcha.css" />
+  </head>
+  <body>
+    <!-- Navigation Menu -->
+    <nav>
+      <menu>
+        <li>
+          Products
+          <menu>
+            <li>Laptops</li>
+            <li>Smartphones</li>
+            <li>
+              Accessories
+              <menu>
+                <li>Chargers</li>
+                <li>Headphones</li>
+                <li class="disabled">Cables</li>
+              </menu>
+            </li>
+            <li>Wearables</li>
+          </menu>
+        </li>
+        <li class="selected">About Us</li>
+        <li>Contact</li>
+      </menu>
+    </nav>
+
+    <div class="container">
+      <h2>Create User Profile</h2>
+      <form action="/submit-profile" method="post">
+        <!-- Personal Information Section -->
+        <fieldset>
+          <legend>Personal Information</legend>
+          <div>
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required />
+          </div>
+          <div>
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required />
+          </div>
+          <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" />
+          </div>
+          <div>
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" />
+          </div>
+          <div>
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="3"></textarea>
+          </div>
+          <div>
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div>
+            <label for="maritalStatus">Marital Status:</label>
+            <select id="maritalStatus" name="maritalStatus">
+              <option value="single">Single</option>
+              <option value="married">Married</option>
+              <option value="divorced">Divorced</option>
+              <option value="widowed">Widowed</option>
+            </select>
+          </div>
+        </fieldset>
+        <!-- Professional Information Section -->
+        <fieldset>
+          <legend>Professional Information</legend>
+          <div>
+            <label for="jobTitle">Job Title:</label>
+            <input type="text" id="jobTitle" name="jobTitle" required />
+          </div>
+          <div>
+            <label for="company">Company:</label>
+            <input type="text" id="company" name="company" required />
+          </div>
+          <div>
+            <label for="experience">Years of Experience:</label>
+            <input
+              type="number"
+              id="experience"
+              name="experience"
+              min="0"
+              required
+            />
+          </div>
+          <div>
+            <label for="skills">Skills:</label>
+            <textarea
+              id="skills"
+              name="skills"
+              rows="3"
+              placeholder="List your skills separated by commas"
+            ></textarea>
+          </div>
+          <div>
+            <label for="linkedin">LinkedIn Profile:</label>
+            <input type="url" id="linkedin" name="linkedin" />
+          </div>
+          <fieldset>
+            <legend>Preferred Work Location:</legend>
+            <div>
+              <input
+                type="radio"
+                id="onsite"
+                name="workLocation"
+                value="onsite"
+              />
+              <label for="onsite">On-site</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="remote"
+                name="workLocation"
+                value="remote"
+              />
+              <label for="remote">Remote</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                id="hybrid"
+                name="workLocation"
+                value="hybrid"
+              />
+              <label for="hybrid">Hybrid</label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Technologies:</legend>
+            <div>
+              <input
+                type="checkbox"
+                id="html"
+                name="technologies"
+                value="HTML"
+              />
+              <label for="html">HTML</label>
+            </div>
+            <div>
+              <input type="checkbox" id="css" name="technologies" value="CSS" />
+              <label for="css">CSS</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="js"
+                name="technologies"
+                value="JavaScript"
+              />
+              <label for="js">JavaScript</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="react"
+                name="technologies"
+                value="React"
+              />
+              <label for="react">React</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="svelte"
+                name="technologies"
+                value="Svelte"
+              />
+              <label for="svelte">Svelte</label>
+            </div>
+          </fieldset>
+        </fieldset>
+        <!-- Submit Button -->
+        <button type="submit">Submit Profile</button>
+      </form>
+    </div>
+  </body>
+</html>
